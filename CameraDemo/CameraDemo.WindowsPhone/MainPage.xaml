@@ -8,7 +8,16 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid x:Name="LayoutRoot">
+
+        <CaptureElement x:Name="captureElement" Margin="0" RenderTransformOrigin="0.5,0.5" Width="800" Height="480" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <CaptureElement.RenderTransform>
+                <CompositeTransform Rotation="90"/>
+            </CaptureElement.RenderTransform>
+        </CaptureElement>
+        <Image x:Name="img" Margin="0"/>
+        <Ellipse x:Name="captureButton" Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="76" Margin="0,0,0,24" Stroke="Black" VerticalAlignment="Bottom" Width="77" Tapped="captureButton_Tapped"/>
+        <Button Content="开启" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" Click="Button_Click"/>
 
     </Grid>
 </Page>
